@@ -1,0 +1,80 @@
+image: docker:latest
+
+services:
+  - mcr.microsoft.com/dotnet/core/sdk:3.1
+  
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  defaultFolder: "deliveraholic_backend"
+  unitTestsFolder: "Unit_tests"
+  integrationTestsFolder: "Integration_tests"
+
+
+#Build
+build:
+  before_script:
+    - "cd $defaultFolder"
+    - "dotnet restore"
+
+  stage: build
+  script:
+    - "dotnet build"
+
+
+#Test
+UnitTests:
+  stage: test
+  script: 
+    - "cd $unitTestsFolder"
+    - "dotnet test"
+
+IntegrationTests:
+  stage: test
+  script: 
+    - "cd $integrationTestsFolder"
+    - "dotnet test"
+
+
+#Security Code Analysis (SAST)
+SecurityAnalysis:
+  stage: test
+  script:
+    - "cd $defaultFolder"
+    - "dotnet add deliveraholic_backend.csproj package SecurityCodeScan"
+    - "dotnet build --no-incremental"
+
+
+#Deploy Backend
+deploy-backend:
+  stage: deploy
+
+  before_script:
+    - docker login -u i441585y -p Welkom12345 
+
+  script:
+    - docker build -t i441585y/backend:latest -f $defaultFolder/Dockerfile .
+    - docker tag i441585y/backend:latest i441585y/backend
+    - docker push i441585y/backend
+
+  after_script:
+    - docker logout
+
+
+#Deploy Frontend
+deploy-frontend:
+  stage: deploy
+
+  before_script:
+    - docker login -u i441585y -p Welkom12345 
+
+  script:
+    - docker build -t i441585y/frontend:latest -f Deliveraholic_frontend/Dockerfile .
+    - docker tag i441585y/frontend:latest i441585y/frontend
+    - docker push i441585y/frontend
+
+  after_script:
+    - docker logout
