@@ -1,0 +1,48 @@
+.global-info{
+    background-color: #26547C;
+    color: white;
+    padding: 125px 50px;
+}
+.global-info-textbox{
+    border-radius: 15px;
+    margin: 25px;
+    width: 50px;
+    padding: 60px;
+    text-align: center;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.global-info-text-header{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.global-info-text-left{
+    text-align: left;
+}
+.global-info-text-right{
+    text-align: right;
+}
+.spacing{
+    padding-top: 15px;
+}
+.global-info-image{
+    background-image: url("../../../Images/communication.jpg");
+    background-position: center;
+    margin-left: 50px;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    .global-info-image{
+        display: none;
+    }
+
+    .global-info-text-left{
+        text-align: left;
+    }
+
+    .global-info-text-right{
+        text-align: center;
+    }
+  }

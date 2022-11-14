@@ -1,0 +1,6 @@
+.banner{
+  width: 100%; 
+  height: 72.5%; 
+  filter: contrast(125%) grayscale(55%);
+  object-fit: cover;
+}

@@ -1,0 +1,141 @@
+  /* Fonts
+  -------------------------------------------------- */
+    @font-face {font-family: "Berlin Sans FB Demi";
+        src: url("./Fonts/BerlinSansFBDemi-Bold.eot"); /* IE9*/
+        src: url("./Fonts/BerlinSansFBDemi-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("./Fonts/BerlinSansFBDemi-Bold.woff2") format("woff2"), /* chrome firefox */
+        url("./Fonts/BerlinSansFBDemi-Bold.woff") format("woff"), /* chrome firefox */
+        url("./Fonts/BerlinSansFBDemi-Bold.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+        url("./Fonts/BerlinSansFBDemi-Bold.svg#Berlin Sans FB Demi") format("svg"); /* iOS 4.1- */
+    }
+
+  /* Global
+  -------------------------------------------------- */
+  html, body, #root{
+    height: 100vh;
+    color: #26547C; 
+   }
+  .headerSpacing{
+    padding-top: 100px;
+  }
+
+    /* Header
+  -------------------------------------------------- */
+  nav{
+    background-color: #558564 !important;
+  }
+  .title {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 6;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: "Berlin Sans FB Demi";
+    text-transform: uppercase;
+    color: white;
+  }
+  .title > span {
+    text-transform: none;
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  input + label {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+  }
+  input + label span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+    display: block;
+    background: #020304;
+    transition: 0.5s;
+  }
+  input + label span:first-child {
+    top: 3px;
+  }
+  input + label span:last-child {
+    top: 16px;
+  }
+  label:hover {
+    cursor: pointer;
+  }
+  input:checked + label span {
+    opacity: 0;
+    top: 50%;
+  }
+  input:checked + label span:first-child {
+    opacity: 1;
+    transform: rotate(405deg);
+  }
+  input:checked + label span:last-child {
+    opacity: 1;
+    transform: rotate(-405deg);
+  }
+  input ~ nav {
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+  }
+  input ~ nav > ul {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    right: 20%;
+  }
+  input ~ nav > ul > li {
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+    list-style: none;
+  }
+  input ~ nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #26547C;
+    font-weight: 700;
+    font-family: sans-serif;
+    display: block;
+    padding: 30px;
+  }
+  input:checked ~ nav {
+    height: 100%;
+    transition-delay: 0s;
+  }
+  input:checked ~ nav > ul > li {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  .hidden{
+    visibility: hidden;
+  }
+  
+  /* Footer
+  -------------------------------------------------- */
+  footer{
+    text-align: center;
+    background-color: #558564 !important;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: "Berlin Sans FB Demi";
+    display: flex;
+  }

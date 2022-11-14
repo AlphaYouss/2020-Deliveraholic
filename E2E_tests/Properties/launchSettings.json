@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "E2E_tests": {
+      "commandName": "Project"
+    }
+  }
+}

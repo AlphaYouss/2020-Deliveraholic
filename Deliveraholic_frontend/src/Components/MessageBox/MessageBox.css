@@ -1,0 +1,32 @@
+.user-alert{
+    position:absolute;
+    z-index: 3;
+    bottom: 15px;
+    right: 10px;
+    border: rgba(0,0,0,0.06) solid 2px;
+    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    animation: fade 20s;
+    opacity: 0;
+  }
+@keyframes fade{
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+.user-alert .header{
+    padding: 4px;
+    background-color: #558564;
+    border-radius:10px 10px 0px 0px;
+    border-bottom: rgba(0,0,0,0.2) solid 1px;
+    color: white;
+  }
+.user-alert .context{
+    background-color: #558564;
+    border-radius:0px 0px 10px 10px;
+    padding:4px;
+    color: white;
+  }

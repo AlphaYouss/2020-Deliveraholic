@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<div>
+    <button id="GetMember">Get member</button>
+    <button id="Signal">Signal test</button>
+
+    <div id="partial"></div>
+
+    <p id="user"></p>
+    <div id="messageList"></div>
+</div>
+
+<input type="hidden" id="signalRConnectionID" />
+
+<div>
+    <h1 class="custom-form-title">
+        Login
+    </h1>
+
+    <div class="custom-wrap-input validate-input">
+        <input class="custom-input" id="username" type="text" minlength="4" value="AlphaYouss" name="Username" placeholder="Username" required>
+    </div>
+
+    <div class="container-form-btn">
+        <button id="Login" class="custom-form-btn">
+            Login
+        </button>
+    </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/lib/signalr/signalr.js"></script>
+<script src="/js/signal.js"></script>

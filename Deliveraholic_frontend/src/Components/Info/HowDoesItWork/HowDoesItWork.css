@@ -1,0 +1,21 @@
+.how-does-it-work-info{
+    margin-top: 10%;
+    display: block !important;
+    margin-bottom: 5%;
+}
+.how-does-it-work-info-header{
+    font-weight: bolder;
+}
+.how-does-it-work-info-step{
+    font-weight: bold;
+}
+.step{
+    padding: 25px 0;
+}
+.step-icon{
+    height: 150px;
+    width: 150px;
+}
+.how-does-it-work-info-step{
+    padding: 12.5px 0;
+}

@@ -1,0 +1,26 @@
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    display: flex;
+    justify-content: space-around;
+}
+.box{
+    border-radius: 15px;
+    margin: 25px;
+    padding: 60px;
+}
+.icon{
+    height: 50px;
+    width: 50px;
+}
+.stats{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+.stats-text{
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+    color: #26547C;
+    text-shadow: .2px .2px black;
+}

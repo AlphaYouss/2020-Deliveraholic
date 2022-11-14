@@ -1,0 +1,15 @@
+.title-box{
+    background-color: #26547C;
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+.page-title{
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.page-sub-title{
+    font-size: 24px;
+}
